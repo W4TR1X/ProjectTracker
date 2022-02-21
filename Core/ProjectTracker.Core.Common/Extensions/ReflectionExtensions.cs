@@ -1,4 +1,4 @@
-﻿namespace ProjectTracker.Ui.Server.Common.Extensions;
+﻿namespace ProjectTracker.Core.Common.Extensions;
 
 public static class ReflectionExtensions
 {
