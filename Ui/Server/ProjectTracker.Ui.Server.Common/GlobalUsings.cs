@@ -1,0 +1,1 @@
+﻿global using ProjectTracker.Ui.Server.Common.Registrars;
