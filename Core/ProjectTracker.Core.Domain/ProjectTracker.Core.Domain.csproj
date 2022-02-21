@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\ProjectTracker.Core.Common\ProjectTracker.Core.Common.csproj" />
   </ItemGroup>
 
 </Project>
