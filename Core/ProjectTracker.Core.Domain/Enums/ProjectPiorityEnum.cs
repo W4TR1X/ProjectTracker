@@ -1,4 +1,4 @@
-﻿namespace ProjectTracker.Core.Domain;
+﻿namespace ProjectTracker.Core.Domain.Enums;
 
 public enum ProjectPiorityEnum
 {

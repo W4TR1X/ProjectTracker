@@ -1,4 +1,4 @@
-﻿namespace ProjectTracker.Core.Domain;
+﻿namespace ProjectTracker.Core.Domain.Entities;
 
 public class ProjectType : BaseEntity<Guid, Guid>
 {

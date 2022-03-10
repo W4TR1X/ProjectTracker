@@ -1,4 +1,4 @@
-﻿namespace ProjectTracker.Core.Domain;
+﻿namespace ProjectTracker.Core.Domain.Entities.Abstract;
 
 public abstract class BaseEntity<TUserId>
     : ICreatableEntity<TUserId>
