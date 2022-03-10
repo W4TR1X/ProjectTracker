@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjectTracker.Core.Domain
+﻿namespace ProjectTracker.Core.Domain
 {
-    public class TaskCheckList : HasKeyBaseDomainObject
+    public class TaskCheckList : BaseEntity<Guid, Guid>
     {
         public Guid TaskId { get; set; }
         public Guid OwnedUserId { get; set; }    

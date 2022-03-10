@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjectTracker.Core.Domain
+﻿namespace ProjectTracker.Core.Domain
 {
-    public class TaskUser : HasKeyBaseDomainObject
+    public class TaskUser : BaseEntity<Guid, Guid>
     {
         public Guid TaskId { get; set; }
         public Guid UserId { get; set; }

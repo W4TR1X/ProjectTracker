@@ -1,6 +1,6 @@
 ﻿namespace ProjectTracker.Core.Domain;
 
-public class Project : HasKeyBaseDomainObject
+public class Project : BaseEntity<Guid, Guid>
 {
     public Guid OwnerUserId { get; set; }
     public virtual User OwnerUser { get; set; }

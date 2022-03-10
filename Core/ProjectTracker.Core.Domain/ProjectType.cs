@@ -1,6 +1,6 @@
 ﻿namespace ProjectTracker.Core.Domain;
 
-public class ProjectType : HasKeyBaseDomainObject
+public class ProjectType : BaseEntity<Guid, Guid>
 {
     public string Name { get; set; }
     public string? Description { get; set; }

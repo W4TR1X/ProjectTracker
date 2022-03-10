@@ -1,6 +1,6 @@
 ﻿namespace ProjectTracker.Core.Domain;
 
-public class User : HasKeyBaseDomainObject
+public class User : BaseEntity<Guid, Guid>
 {
 
 }
