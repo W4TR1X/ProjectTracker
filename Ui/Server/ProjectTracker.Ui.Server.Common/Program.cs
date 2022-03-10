@@ -1,8 +1,8 @@
 ﻿namespace ProjectTracker.Ui.Server.Common;
-public class Program
+public static class Program
 {
     public static void Main()
     {
-
+        // Method intentionally left empty.
     }
 }
