@@ -1,6 +1,6 @@
 ﻿namespace ProjectTracker.Data.EntityFramework.Configurations
 {
-    internal class TaskChecklistConfiguration : IEntityTypeConfiguration<TaskCheckListRow>
+    internal class TaskChecklistRowConfiguration : IEntityTypeConfiguration<TaskCheckListRow>
     {
         public void Configure(EntityTypeBuilder<TaskCheckListRow> builder)
         {
