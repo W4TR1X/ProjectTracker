@@ -28,4 +28,6 @@ public class Project : BaseEntity<Guid, Guid>
     public bool IsPublic { get; set; }
     public bool IsLocked { get; set; }
     public bool IsArchived { get; set; }
+
+    public ICollection<ProjectAttachment> ProjectAttachments { get; set; }
 }
