@@ -11,8 +11,10 @@ namespace ProjectTracker.Data.EntityFramework.Configurations
         public void Configure(EntityTypeBuilder<TaskActivityComment> builder)
         {
             builder.Configure();
-            builder.Property(tac => tac.ActivityId).IsRequired();
-            builder.Property(tac => tac.UserId).IsRequired();
+            builder.Property(tac => tac.ActivityId).ConfigureGuid();
+
+            builder.Property(tac => tac.UserId).ConfigureUser();
+
             builder.Property(tac => tac.Comment).IsRequired().HasMaxLength(200);
 
             builder.HasOne(tac => tac.TaskActivity)

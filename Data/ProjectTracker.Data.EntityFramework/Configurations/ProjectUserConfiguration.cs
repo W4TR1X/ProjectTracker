@@ -11,8 +11,9 @@ namespace ProjectTracker.Data.EntityFramework.Configurations
         public void Configure(EntityTypeBuilder<ProjectUser> builder)
         {
             builder.Configure();
-            builder.Property(pu => pu.ProjectId).IsRequired();
-            builder.Property(pu => pu.UserId).IsRequired();
+            builder.Property(pu => pu.ProjectId).ConfigureGuid();
+
+            builder.Property(pu => pu.UserId).ConfigureUser();
 
             builder.HasOne(pu => pu.User)
                 .WithMany(u => u.ProjectUsers)

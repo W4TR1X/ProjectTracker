@@ -23,7 +23,18 @@
                 .HasMaxLength(200);
 
 
-            builder.HasOne(p => p.OwnerUser)
+            builder.Property(p => p.StartDate)
+                .ConfigureDateTime();
+
+            builder.Property(p => p.EndDate)
+                .ConfigureDateTime();
+
+            builder.Property(p => p.TargetEndDate)
+                .ConfigureDateTime();
+
+
+
+        builder.HasOne(p => p.OwnerUser)
                 .WithMany(u => u.Projects)
                 .HasForeignKey(p => p.OwnerUserId)
                 .OnDelete(DeleteBehavior.NoAction);

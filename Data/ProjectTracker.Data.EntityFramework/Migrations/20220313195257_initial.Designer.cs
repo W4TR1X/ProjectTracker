@@ -12,7 +12,7 @@ using ProjectTracker.Data.EntityFramework;
 namespace ProjectTracker.Data.EntityFramework.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220313192152_initial")]
+    [Migration("20220313195257_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,15 +40,13 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -74,15 +72,14 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<DateTime?>("EndDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime2(0)");
 
                     b.Property<bool>("IsArchived")
                         .HasColumnType("bit");
@@ -111,7 +108,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("StartDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime2(0)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -120,14 +117,13 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("TargetEndDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime2(0)");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -162,8 +158,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -184,8 +179,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -217,8 +211,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int?>("EmojiEnum")
                         .HasColumnType("int");
@@ -236,8 +229,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -269,8 +261,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Details")
                         .IsRequired()
@@ -289,8 +280,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -319,8 +309,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .HasMaxLength(200)
@@ -376,8 +365,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -406,8 +394,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .HasMaxLength(200)
@@ -425,8 +412,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -449,8 +435,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("JoinType")
                         .HasColumnType("int");
@@ -465,8 +450,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -496,8 +480,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .HasMaxLength(200)
@@ -515,8 +498,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -539,8 +521,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -551,7 +532,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime2(0)");
 
                     b.Property<Guid>("TaskId")
                         .HasColumnType("uniqueidentifier");
@@ -563,8 +544,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -602,8 +582,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int?>("EmojiId")
                         .HasColumnType("int");
@@ -615,8 +594,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -651,8 +629,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -668,8 +645,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -699,8 +675,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool?>("IsSuccessfull")
                         .HasColumnType("bit");
@@ -721,8 +696,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -751,8 +725,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("ProjectJoinTypeEnum")
                         .HasColumnType("int");
@@ -764,8 +737,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -795,15 +767,13 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2(0)");
 
                     b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier")
-                        .IsFixedLength();
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 

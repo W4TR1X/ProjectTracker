@@ -17,9 +17,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -37,9 +37,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -57,9 +57,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -74,9 +74,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -94,9 +94,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     ProjectTypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
-                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    TargetEndDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    StartDate = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
+                    EndDate = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
+                    TargetEndDate = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
                     TargetDayCount = table.Column<int>(type: "int", nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
                     Piority = table.Column<int>(type: "int", nullable: false),
@@ -106,9 +106,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -181,9 +181,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -223,9 +223,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -255,9 +255,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -288,9 +288,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -324,9 +324,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -381,9 +381,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -408,7 +408,7 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     TaskId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    StartDate = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     EndDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     TotalTime = table.Column<TimeSpan>(type: "time", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -416,9 +416,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -449,9 +449,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -485,9 +485,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -517,9 +517,9 @@ namespace ProjectTracker.Data.EntityFramework.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2(0)", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", fixedLength: true, nullable: true)
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {

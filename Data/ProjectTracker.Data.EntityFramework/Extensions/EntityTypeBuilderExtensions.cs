@@ -17,18 +17,6 @@ public static class EntityTypeBuilderExtensions
         ConfigureDeletableEntity(builder);
     }
 
-    public static void ConfigureGuid(this PropertyBuilder<Guid> builder)
-    {
-        builder.HasColumnType("uniqueidentifier")
-            .IsRequired();
-    }
-    public static void ConfigureGuid(this PropertyBuilder<Guid?> builder)
-    {
-        builder.HasColumnType("uniqueidentifier")
-            .IsFixedLength(true);
-    }
-
-
     private static void ConfigureId<T>(EntityTypeBuilder<T> builder) where T : class
     {
         if (typeof(T).IsAssignableTo(typeof(IBaseEntity<Guid>)))
@@ -50,11 +38,11 @@ public static class EntityTypeBuilderExtensions
 
     public static void ConfigureUser(this PropertyBuilder<Guid> builder)
     {
-        ConfigureGuid(builder);
+        GuidConfigurationExtensions.ConfigureGuid(builder);
     }
     public static void ConfigureUser(this PropertyBuilder<Guid?> builder)
     {
-        ConfigureGuid(builder);
+        GuidConfigurationExtensions.ConfigureGuid(builder);
     }
 
 
@@ -63,11 +51,10 @@ public static class EntityTypeBuilderExtensions
         if (typeof(T).IsAssignableTo(typeof(ICreatableEntity<Guid>)))
         {
             builder.Property(x => ((ICreatableEntity<Guid>)x).CreatedBy)
-               .ConfigureGuid();
+               .ConfigureUser();
 
             builder.Property(x => ((ICreatableEntity<Guid>)x).CreatedAt)
-                .HasColumnType("datetime2(0)")
-                .IsRequired();
+                .ConfigureDateTime();
         }
     }
 
@@ -79,7 +66,7 @@ public static class EntityTypeBuilderExtensions
                 .ConfigureUser();
 
             builder.Property(x => ((IUpdatableEntity<Guid>)x).UpdatedAt)
-                .HasColumnType("datetime2(0)");
+                .ConfigureDateTime();
         }
     }
 
@@ -91,7 +78,7 @@ public static class EntityTypeBuilderExtensions
                 .ConfigureUser();
 
             builder.Property(x => ((IDeletableEntity<Guid>)x).DeletedAt)
-                .HasColumnType("datetime2(0)");
+                .ConfigureDateTime();
         }
     }
 }

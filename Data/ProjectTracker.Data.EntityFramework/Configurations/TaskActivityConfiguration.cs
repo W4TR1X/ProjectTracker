@@ -5,10 +5,13 @@
         public void Configure(EntityTypeBuilder<TaskActivity> builder)
         {
             builder.Configure();
-            builder.Property(ta => ta.TaskId).IsRequired();
-            builder.Property(ta => ta.StartDate).IsRequired();
+            builder.Property(ta => ta.TaskId).ConfigureGuid();
+
+            builder.Property(ta => ta.StartDate).ConfigureDateTime();
             builder.Property(ta => ta.TotalTime).IsRequired();
-            builder.Property(ta => ta.UserId).IsRequired();
+
+            builder.Property(ta => ta.UserId).ConfigureUser();
+
             builder.Property(ta => ta.Description).IsRequired().HasMaxLength(200);
 
             builder.HasOne(ta => ta.ProjectTask)

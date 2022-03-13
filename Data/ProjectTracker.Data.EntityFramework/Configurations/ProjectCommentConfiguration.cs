@@ -6,7 +6,9 @@
         {
             builder.Configure();
             builder.Property(pc => pc.ProjectId).ConfigureGuid();
+
             builder.Property(pc => pc.UserId).ConfigureUser();
+
             builder.Property(pc => pc.Comment).IsRequired().HasMaxLength(200);
 
             //TODO: Task'lerin commentleri gelmemeli

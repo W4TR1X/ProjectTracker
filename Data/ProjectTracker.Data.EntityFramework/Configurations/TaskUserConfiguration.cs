@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjectTracker.Data.EntityFramework.Configurations
+﻿namespace ProjectTracker.Data.EntityFramework.Configurations
 {
     internal class TaskUserConfiguration : IEntityTypeConfiguration<TaskUser>
     {

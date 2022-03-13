@@ -5,10 +5,12 @@
         public void Configure(EntityTypeBuilder<TaskCheckListRow> builder)
         {
             builder.Configure();
-            builder.Property(tc => tc.TaskId).IsRequired();
-            builder.Property(tc => tc.OwnerUserId).IsRequired();
+            builder.Property(tc => tc.TaskId).ConfigureGuid();
+            builder.Property(tc => tc.OwnerUserId).ConfigureUser();
+            builder.Property(tc => tc.CompletorUserId).ConfigureUser();
+
+            //TODO: Hani bunun lenghti !!!
             builder.Property(tc => tc.Description).IsRequired();
-            builder.Property(tc => tc.CompletorUserId).IsRequired();
 
             builder.HasOne(tc => tc.OwnerUser)
                 .WithMany(tu => tu.TaskCheckListRows)

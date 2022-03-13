@@ -13,7 +13,7 @@ namespace ProjectTracker.Data.EntityFramework.Configurations
             builder.Configure();
             builder.Property(pt => pt.ProjectId).ConfigureGuid();
             builder.Property(pt => pt.StageId).ConfigureGuid();
-            builder.Property(pt => pt.StageId).ConfigureGuid();
+
             builder.Property(pt => pt.Description).HasMaxLength(200);
 
             builder.HasOne(pt=>pt.Project)
