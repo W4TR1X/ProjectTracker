@@ -12,5 +12,6 @@ public class ProjectComment : BaseEntity<Guid, Guid>
     public virtual  ProjectTask? ProjectTask { get; set; }
     public virtual ProjectComment? ParentComment { get; set; }
     public virtual EmojiEnum? EmojiEnum { get; set; }
-
+    public virtual ICollection<ProjectComment> ProjectComments { get; set; }
+    public virtual ICollection<TaskActivityComment> TaskActivityComments { get; set; }
 }

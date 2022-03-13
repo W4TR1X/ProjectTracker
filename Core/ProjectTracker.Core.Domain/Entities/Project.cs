@@ -3,9 +3,11 @@
 public class Project : BaseEntity<Guid, Guid>
 {
     public Guid OwnerUserId { get; set; }
+
     public virtual User OwnerUser { get; set; }
 
     public Guid? SponsorUserId { get; set; }
+
     public virtual User? SponsorUser { get; set; }
 
     public Guid CompanyId { get; set; }
@@ -15,7 +17,7 @@ public class Project : BaseEntity<Guid, Guid>
     public virtual ProjectType ProjectType { get; set; }
 
     public string Name { get; set; }
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     public DateTime? StartDate { get; set; }
     public DateTime? EndDate { get; set; }
@@ -29,5 +31,11 @@ public class Project : BaseEntity<Guid, Guid>
     public bool IsLocked { get; set; }
     public bool IsArchived { get; set; }
 
-    public ICollection<ProjectAttachment> ProjectAttachments { get; set; }
+    public virtual ICollection<ProjectAttachment> ProjectAttachments { get; set; }
+    public virtual ICollection<ProjectComment> ProjectComments { get; set; }
+    public virtual ICollection<ProjectHistory> ProjectHistories { get; set; }
+    public virtual ICollection<ProjectStage> ProjectStages { get; set; }
+    public virtual ICollection<ProjectTask> ProjectTasks { get; set; }
+    public virtual ICollection<ProjectUser> ProjectUsers { get; set; }
+
 }

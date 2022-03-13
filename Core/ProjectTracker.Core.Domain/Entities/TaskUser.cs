@@ -8,5 +8,9 @@ public class TaskUser : BaseEntity<Guid, Guid>
 
     public virtual ProjectTask ProjectTask { get; set; }
     public virtual User User { get; set; }
+    public virtual ICollection<TaskActivityComment> TaskActivityComments { get; set; }
+    public virtual ICollection<TaskCheckListRow> TaskCheckListRows { get; set; }
+    public virtual ICollection<TaskCheckListRow> CompletedTaskCheckListRows { get; set; }
+
 
 }

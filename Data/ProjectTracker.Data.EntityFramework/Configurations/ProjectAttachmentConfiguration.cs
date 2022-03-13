@@ -6,6 +6,7 @@ namespace ProjectTracker.Data.EntityFramework.Configurations
     {
         public void Configure(EntityTypeBuilder<ProjectAttachment> builder)
         {
+            builder.Configure();
             builder.Property(pa => pa.ProjectId).IsRequired();
             builder.Property(pa => pa.AttachmentPath).IsRequired();
             builder.Property(pa => pa.DisplayText).HasMaxLength(50);

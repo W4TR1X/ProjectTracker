@@ -10,4 +10,8 @@ public class ProjectUser : BaseEntity<Guid, Guid>
     public virtual User User { get; set; }
     public virtual Project Project { get; set; }
 
+    public virtual ICollection<TaskActivity> TaskActivities { get; set; }
+    public virtual ICollection<TaskRequest> OwnedTaskRequests { get; set; }
+    public virtual ICollection<TaskRequest> TargetTaskRequests { get; set; }
+
 }

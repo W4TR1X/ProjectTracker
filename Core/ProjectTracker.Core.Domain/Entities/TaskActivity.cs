@@ -10,6 +10,6 @@ public class TaskActivity : BaseEntity<Guid, Guid>
     public string Description { get; set; }
 
     public virtual ProjectTask ProjectTask { get; set; }
-    public virtual ProjectUser OwnedUser { get; set; }
-
+    public virtual ProjectUser OwnerUser { get; set; }
+    public virtual ICollection<TaskActivityComment> TaskActivityComments { get; set; }
 }

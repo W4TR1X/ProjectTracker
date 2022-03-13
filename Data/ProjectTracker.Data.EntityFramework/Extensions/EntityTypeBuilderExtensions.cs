@@ -17,15 +17,14 @@ public static class EntityTypeBuilderExtensions
         ConfigureDeletableEntity(builder);
     }
 
-    private static void ConfigureGuid(this PropertyBuilder<Guid> builder)
+    public static void ConfigureGuid(this PropertyBuilder<Guid> builder)
     {
-        builder.HasMaxLength(36)
-            .IsFixedLength(true)
+        builder.HasColumnType("uniqueidentifier")
             .IsRequired();
     }
-    private static void ConfigureGuid(this PropertyBuilder<Guid?> builder)
+    public static void ConfigureGuid(this PropertyBuilder<Guid?> builder)
     {
-        builder.HasMaxLength(36)
+        builder.HasColumnType("uniqueidentifier")
             .IsFixedLength(true);
     }
 
