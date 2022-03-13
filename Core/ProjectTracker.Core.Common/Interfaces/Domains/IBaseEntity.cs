@@ -7,5 +7,5 @@ public interface IBaseEntity
 
 public interface IBaseEntity<TId> : IBaseEntity where TId : struct
 {
-    TId Id { get; set; }
+    TId Id { get; }
 }

@@ -2,6 +2,8 @@
 
 public interface IDeletableEntity<TUserId> : IBaseEntity where TUserId : struct
 {
-    DateTime? DeletedAt { get; set; }
+    DateTime? DeletedAt { get; }
     TUserId? DeletedBy { get; set; }
+
+    void SetDeletedAt(DateTime? at);
 }

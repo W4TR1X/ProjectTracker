@@ -23,9 +23,9 @@ namespace ProjectTracker.Data.EntityFramework.Configurations
 
             // TODO: Test this
             builder.HasOne(pt => pt.OwnerTaskStage)
-               .WithOne(ts => ts.ProjectTasks)
-               .HasForeignKey<ProjectTask>(x => x.StageId)
-               .HasPrincipalKey<TaskStage>(x => x.ProjectTask.Id)
+               .WithMany(ts => ts.ProjectTasks)
+               .HasForeignKey(x => x.StageId) // <ProjectTask>
+                                              //.HasPrincipalKey<TaskStage>(x => x.ProjectTask.Id)
                .OnDelete(DeleteBehavior.NoAction);
 
 
