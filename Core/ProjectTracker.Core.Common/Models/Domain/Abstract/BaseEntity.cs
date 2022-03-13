@@ -1,10 +1,10 @@
-﻿namespace ProjectTracker.Core.Domain.Entities.Abstract;
+﻿namespace ProjectTracker.Core.Common.Models.Domain.Abstract;
 
 public abstract class BaseEntity<TUserId>
-    : ICreatableEntity<TUserId>
-    , IUpdatableEntity<TUserId>
-    , IDeletableEntity<TUserId> 
-    where TUserId : struct
+: ICreatableEntity<TUserId>
+, IUpdatableEntity<TUserId>
+, IDeletableEntity<TUserId>
+where TUserId : struct
 {
     public DateTime CreatedAt { get; set; }
     public TUserId CreatedBy { get; set; }
