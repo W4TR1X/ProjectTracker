@@ -24,6 +24,7 @@ public class ProjectTask : BaseEntity<Guid, Guid>
     public virtual ProjectTask? ParentTask {get; set; }
     public virtual User? OwnedUser { get; set; }
 
+    public ICollection<ProjectAttachment> ProjectAttachments { get; set; }
 
 
 }
